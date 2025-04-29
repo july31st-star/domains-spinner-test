@@ -10,7 +10,7 @@ import {
   Card,
   Icon,
 } from "@shopify/polaris";
-import { ArrowLeftIcon, CheckCircleIcon } from "@shopify/polaris-icons";
+import { CheckCircleIcon } from "@shopify/polaris-icons";
 import Player from "lottie-react";
 import lottieSpinner from "./lottie-spinner.json";
 
