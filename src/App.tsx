@@ -17,10 +17,15 @@ import lottieSpinner from "./lottie-spinner.json";
 export default function App() {
   return (
     <Page
-      backAction={{ content: "Settings", icon: ArrowLeftIcon }}
+      backAction={{
+        content: "Settings",
+        onAction: () => {
+          /* your logic */
+        },
+      }}
       title="custom-storefronts.com"
       titleMetadata={<Badge tone="success">Live</Badge>}
-      secondaryActions={[{ content: "View", variant: "tertiary" }]}
+      secondaryActions={[{ content: "View" }]}
     >
       <BlockStack gap="500">
         <Text tone="subdued" as="p">
