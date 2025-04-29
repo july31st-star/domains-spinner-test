@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Spinner</title>
+    <style>
+      .spinner-container {
+        width: 200px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      svg {
+        width: 200px;
+        height: 200px;
+        display: block;
+      }
+      .arc {
+        fill: none;
+        stroke-width: 25;
+        stroke-linecap: round;
+        stroke-dasharray: 570;
+        stroke-dashoffset: 430;
+        transform-origin: 50% 50%;
+      }
+      .arc1 {
+        stroke: #cccccc;
+        animation: spin1 3s linear infinite, trim1 3s linear infinite;
+      }
+      .arc2 {
+        stroke: #999999;
+        animation: spin2 3s linear infinite, trim2 3s linear infinite;
+      }
+      .arc3 {
+        stroke: #666666;
+        animation: spin3 3s linear infinite, trim3 3s linear infinite;
+      }
+      @keyframes spin1 {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spin2 {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(-360deg);
+        }
+      }
+      @keyframes spin3 {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes trim1 {
+        0% {
+          stroke-dashoffset: 430;
+        }
+        50% {
+          stroke-dashoffset: 0;
+        }
+        100% {
+          stroke-dashoffset: 430;
+        }
+      }
+      @keyframes trim2 {
+        0% {
+          stroke-dashoffset: 570;
+        }
+        50% {
+          stroke-dashoffset: 140;
+        }
+        100% {
+          stroke-dashoffset: 570;
+        }
+      }
+      @keyframes trim3 {
+        0% {
+          stroke-dashoffset: 285;
+        }
+        50% {
+          stroke-dashoffset: 0;
+        }
+        100% {
+          stroke-dashoffset: 285;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="spinner-container">
+      <svg viewBox="0 0 200 200">
+        <circle class="arc arc1" cx="100" cy="100" r="90" />
+        <circle class="arc arc2" cx="100" cy="100" r="65" />
+        <circle class="arc arc3" cx="100" cy="100" r="40" />
+      </svg>
+    </div>
+  </body>
+</html>
