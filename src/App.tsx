@@ -9,14 +9,8 @@ import {
   Link,
   Card,
   Icon,
-  Spinner,
 } from "@shopify/polaris";
-import {
-  ArrowLeftIcon,
-  GlobeIcon,
-  CheckIcon,
-  CheckCircleIcon,
-} from "@shopify/polaris-icons";
+import { ArrowLeftIcon, CheckCircleIcon } from "@shopify/polaris-icons";
 import Player from "lottie-react";
 import lottieSpinner from "./lottie-spinner.json";
 
